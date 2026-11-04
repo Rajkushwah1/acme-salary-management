@@ -81,7 +81,7 @@ class Employee < ApplicationRecord
 
     transaction do
       record = salary_records.lock.find(record_id)
-      
+
       prev_salary = record.base_salary
       prev_currency = record.currency
       prev_freq = record.pay_frequency

@@ -3,6 +3,16 @@ inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 
 # Overwrite or add rules to create your own house style
 #
-# # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
-# Layout/SpaceInsideArrayLiteralBrackets:
-#   Enabled: false
+# Use standard Ruby [a, b, c] without forcing spaces inside array brackets
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: no_space
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/*'
+    - 'node_modules/**/*'
+    - 'client/**/*'
+    - 'vendor/**/*'
+

@@ -21,7 +21,7 @@ class CreateEmployees < ActiveRecord::Migration[8.1]
 
     # Trigram GIN index for fast search across 10,000 employees
     execute <<-SQL
-      CREATE INDEX idx_employees_trgm_search ON employees 
+      CREATE INDEX idx_employees_trgm_search ON employees
       USING gin ((first_name || ' ' || last_name || ' ' || employee_code || ' ' || email) gin_trgm_ops);
     SQL
   end
