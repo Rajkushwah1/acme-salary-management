@@ -97,6 +97,8 @@ A default administrative user is created automatically during seeding:
 - **Email:** `hr.manager@acme.com`
 - **Password:** `AcmeAdmin2026!`
 
+> **Security Note:** These credentials are provisioned exclusively via `db/seeds.rb` for local evaluation and testing purposes. In production environments, administrative accounts are never committed to version control and are securely injected via secret management / environment variables.
+
 The Rails API will be accessible at `http://localhost:3000`.
 
 ---
