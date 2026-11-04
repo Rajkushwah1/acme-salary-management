@@ -16,7 +16,7 @@ gem "bcrypt", "~> 3.1.7"
 gem "rack-cors"
 
 group :development, :test do
-  gem "rspec-rails", "~> 7.0"
+  gem "rspec-rails", "~> 8.0"
   gem "factory_bot_rails", "~> 6.4"
   gem "faker", "~> 3.4"
 
